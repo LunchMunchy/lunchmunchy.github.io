@@ -1,10 +1,8 @@
 ---
-layout: post_layout
-title: "Why I skipped Day 1 of 100DaysOfKubernetes"
-avatar:
-category: DevSecOps
-tags: Programming 100DaysOfKubernetes
-path: posts
+layout: post
+title: Why I skipped Day 1 of 100DaysOfKubernetes
+subtitle: A soul crushing experience
+tags: [Programming, 100DaysOfKubernetes]
 ---
 
 # 🤨 What went wrong?
@@ -33,7 +31,7 @@ I hate Ruby. But not as much as I used to.
 GitHub pages is really not that hard. All you need to do is create a repository and name it `[Insert Anything].github.io`. Then have an ```index.html``` or something that renders a webpage (like a Jekyll theme). That's it. 90 whole minutes of tinkering just to come to that conclusion. 💀
 
 Once I got Beautiful Jekyll working, I decided to write my post. How Jekyll Works is you need:
-1. Create a [post](https://jekyllrb.com/docs/posts/) with a ```YEAR-MONTH-DAY-title.MARKUP``` title
+1. Create a [post](https://jekyllrb.com/docs/posts/) with a ```YEAR-MONTH-DAY-title.md``` title
 2. Add a [YAML Front Matter](https://jekyllrb.com/docs/posts/) block to start of the file
 3. Let your creative juices flow freely on the pages
 4. Allow your chosen Jekyll theme to magically format your ```.md```
