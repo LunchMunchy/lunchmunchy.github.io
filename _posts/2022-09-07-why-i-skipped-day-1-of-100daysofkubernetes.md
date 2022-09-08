@@ -3,7 +3,7 @@ layout: post_layout
 title: "Why I skipped Day 1 of 100DaysOfKubernetes"
 avatar:
 category: DevSecOps
-tags: Programming - 100DaysOfKubernetes
+tags: Programming 100DaysOfKubernetes
 path: posts
 ---
 
