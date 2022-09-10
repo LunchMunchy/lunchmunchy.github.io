@@ -38,6 +38,10 @@ class Post < Thor
       post.puts "cover-img: [REPLACE_ME]"
       post.puts "thumbnail-img: [REPLACE ME]"
       post.puts "---"
+      post.puts "# 🤨 What went wrong?"
+      post.puts "# 💡 Here's what I learned"
+      post.puts "# 💤 TL;DR"
+      post.puts "# 📚 Resources"
     end
 
     # opens the md file in your default editor

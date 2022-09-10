@@ -13,7 +13,7 @@ This morning I spent 5 hours bashing my head against the wall that is my keyboar
 
 1. What is Jekyll and why do bloggers love it?
 1. How do you incorporate it with GitHub Pages?
-1. "How to setup ~~Minima~~ ~~Hyde~~ ~~Chirpy~~ 
+1. "How to setup ~~Minima~~ ~~Hyde~~ ~~Chirpy~~" 
 1. How come this [insert issue] isn't working???
 1. "What is Jekyll made easy"
 1. Will I be able to make my #100DaysOfCode post?
@@ -63,7 +63,7 @@ class Post < Thor
     # fomat tags in the way you want them to be displayed
     tags = options[:tags].gsub(/\W+/, ", ") if options[:tags]
     #filename = "_posts/#{category.downcase}/#{options[:date]}-#{title.to_url}.md"
-    filename = "_posts/#{options[:date]}-#{category.upcase}-#{title.to_url}.md"
+    filename = "_posts/#{options[:date]}-#{title.to_url}.md"
 
     if File.exist?(filename)
       abort("#{filename} already exists!")
