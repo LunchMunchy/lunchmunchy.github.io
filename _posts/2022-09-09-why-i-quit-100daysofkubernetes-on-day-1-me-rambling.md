@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Why I quit 100DaysOfKubernetes on Day 1
+title: Why I quit on Day 1 of 100DaysOfKubernetes
 subtitle: DAY 1
 tags: [100DaysOfKubernetes, Me Rambling]
 thumbnail-img: assets/img/thumbnails/Day%201.png
 comments: true
 ---
 # ❄️ I Flaked Out
+
 It's true. I actually quit a 100 day challenge on the first day. \
 But wait... It's not what you think! (Yes, I did clickbait you.)
 
