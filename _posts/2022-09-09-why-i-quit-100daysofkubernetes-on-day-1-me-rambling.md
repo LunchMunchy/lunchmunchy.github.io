@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Why I quit 100DaysOfKubernetes on Day 1 Me rambling
-subtitle: [Day 1]
+subtitle: Day 1
 tags: [100DaysOfKubernetes, Me Rambling]
-cover-img: [REPLACE_ME]
 thumbnail-img: /assets/img/I%20Quit.jpg
+comments: true
 ---
 # ❄️ I Flaked Out
 It's true. I actually quit a 100 day challenge on the first day. \
@@ -39,8 +39,7 @@ I thought it would be best for me to document my growing knowledge base. \
 I'm writing to a pretend audience as if they knew very little about my topics. \
 After all, they say you learn the most when you teach stupid people:. Like me.
 
-![IYKYK](/assets/img/Dumb%20and%20Dumber.gif)
-{{ page.thumbnail-img }}
+![IYKYK](../assets/img/Dumb-and-Dumber.gif)
 
 Thank goodness I got that the weight is off my chest. \
 Now I can finally get back to living up to my blog's subtitle. \

@@ -3,8 +3,8 @@ layout: post
 title: Kubernetes - A Beginning
 subtitle: Day 2
 tags: [100DaysOfCloud, DevSecOps]
-cover-img: [REPLACE_ME]
-thumbnail-img: [REPLACE ME]
+thumbnail-img: assets/img/404-southpark.jpg
+comments: true
 ---
 
 # 🤨 Let's define Kubernetes
@@ -40,11 +40,13 @@ Now I've convinced myself containers is the way to go, time to set it up. Let's 
 Sure, setting up containers is easier than setting up servers. Servers means physical installation, getting an operatin system, creating user accounts, downloading apps. It's a lot of work. Containers are easier.
 
 But containers still require some elbow grease. Especially for 10 containers. Using Docker to create containers, I still have to type in a couple lines of code
-```
+
+```bash
 docker pull <image name> # Download the application
 docker run <image_name>  # Start the application in a container
 docker ps -a             # Check that your container is up and running
 ```
+
 Do that 10 times and you'll wish "Gee, I wish there was a way to automate that work." Well there is. It's using an orchestration like Kubernetes. *Role Credits.*
 
 # 💤 TL;DR
@@ -57,6 +59,8 @@ Think literal conductor, like an orchestra.
 `Lots of notes on sheet of music + Different musicians "executing" the music + Conductor managing all the musicians.`
 
 In the end, Kubernetes helps your scale your product. If you need to add/stop/change ~~musicians~~ I mean containers, Kubernetes lets you do that easily and all at once.
+
+![](../assets/img/conductor.png)
 
 # 📚 Resources
 - [What is Kubernetes | Kubernetes explained in 15 mins ](https://youtu.be/VnvRFRk_51k?t=87) <- I didn't watch the full video. Literally stopped at this one frame.

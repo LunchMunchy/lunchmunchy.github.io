@@ -2,7 +2,8 @@
 layout: post
 title: Why I skipped Day 1 of 100DaysOfKubernetes
 subtitle: A soul crushing experience
-tags: [Programming, 100DaysOfKubernetes]
+tags: [100DaysOfKubernetes, Programming]
+comments: true
 ---
 
 # 🤨 What went wrong?
@@ -38,7 +39,7 @@ Once I got Beautiful Jekyll working, I decided to write my post. How Jekyll Work
 
 Because I wanted to automate step 2, I created a script ***heavily*** borrowed from [Kostas Karampinas](https://rpk.io/posts/automatically-create-jekyll-posts-with-thor) and [Chad](https://gist.github.com/ichadhr/0b4e35174c7e90c0b31b).
 
-```
+```ruby
 require "stringex"
 require "thor"
 
