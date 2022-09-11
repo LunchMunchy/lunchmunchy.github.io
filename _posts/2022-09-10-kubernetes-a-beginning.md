@@ -63,6 +63,6 @@ In the end, Kubernetes helps your scale your product. If you need to add/stop/ch
 ![](../assets/img/conductor.png)
 
 # 📚 Resources
-- [Kubernetes explained in 15 mins](https://youtu.be/VnvRFRk_51k?t=87) <- I didn't watch the full video. Literally stopped at this one frame.
+- [Kubernetes explained in 15 mins](https://youtu.be/VnvRFRk_51k?t=87) <- Literally only used this one frame.
 - [Moving from Monoliths to Microservices 🎂 → 🍰🍰🍰](https://www.youtube.com/watch?v=rckfN7xFig0)
-- [Kubernetes Comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic) <- Read this after I wrote the blog (Proud of myself for getting half right)
+- [Kubernetes Comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic) <- Read this after I wrote the blog.

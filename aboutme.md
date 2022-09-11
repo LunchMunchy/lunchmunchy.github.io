@@ -1,16 +1,19 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: My insecurity is the punchline of my personality
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Hi I'm Paul. I find amusement in writing to myself on the internet. My sense of humor is weird... I'm still trying to figure it out.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+When I'm not feeling awkward, I like to entertain myself in other ways:
 
-What else do you need?
+- Wearing an apron around the house
+- Farming bacteria in gallon-sized jars
+- Staring down small creatures in my backyard.
 
-### My story
+In spite of my oddities, my friends think I'm pretty cool. 😳
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+### Why a blog?
+
+I'm trying to make money. The way I see it, either some mid-cap company's hiring manager will offer me a job because they like my writing, or enough poor shmucks visit my site so that I can monetize their personal data with crappy ads. Trust me, it'll work out. **You'll see.** 
