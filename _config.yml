@@ -145,13 +145,13 @@ page-col: "#FFFFFF"
 text-col: "#16697A"
 link-col: "#FFA62B"
 hover-col: "#FFBC42"
-footer-col: "#EAEAEA"
+footer-col: "#82C0CC"
 footer-text-col: "#777777"
 footer-link-col: "#FFA62B"
 footer-hover-col: "#FFBC42"
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
