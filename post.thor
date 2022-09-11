@@ -38,6 +38,7 @@ class Post < Thor
       post.puts "cover-img: REPLACE_ME"
       post.puts "thumbnail-img: assets/img/thumbnails/Day%20X.png
       post.puts "comments: true"
+      post.puts "readtime: true"
       post.puts "---"
       post.puts "# 🤨 What went wrong?"
       post.puts "# 💡 Here's what I learned"

@@ -5,6 +5,7 @@ subtitle: DAY 2
 tags: [100DaysOfCloud, DevSecOps]
 thumbnail-img: assets/img/thumbnails/Day%202.png
 comments: true
+readtime: true
 ---
 
 # 🤓 Let's define Kubernetes

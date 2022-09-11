@@ -5,6 +5,7 @@ subtitle: DAY 1
 tags: [100DaysOfKubernetes, Me Rambling]
 thumbnail-img: assets/img/thumbnails/Day%201.png
 comments: true
+readtime: true
 ---
 # ❄️ I Flaked Out
 

@@ -4,6 +4,7 @@ title: Why I skipped Day 1 of 100DaysOfKubernetes
 subtitle: A soul crushing experience
 tags: [100DaysOfKubernetes, Programming]
 comments: true
+readtime: true
 ---
 
 # 🤨 What went wrong?
