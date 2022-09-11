@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Why I quit 100DaysOfKubernetes on Day 1 Me rambling
-subtitle: Day 1
+title: Why I quit 100DaysOfKubernetes on Day 1
+subtitle: DAY 1
 tags: [100DaysOfKubernetes, Me Rambling]
-thumbnail-img: /assets/img/Table-Flip-Guy.jpg
+thumbnail-img: assets/img/thumbnails/Day1.png
 comments: true
 ---
 # ❄️ I Flaked Out
