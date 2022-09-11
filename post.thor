@@ -33,10 +33,10 @@ class Post < Thor
       post.puts "---"
       post.puts "layout: post"
       post.puts "title: #{title.gsub(/&/,'&amp;')}"
-      post.puts "subtitle: REPLACE ME"
+      post.puts "subtitle: DAY X"
       post.puts "tags: \[#{tags}\]"
-      post.puts "cover-img: [REPLACE_ME]"
-      post.puts "thumbnail-img: /assets/img/404-southpark.jpg"
+      post.puts "cover-img: REPLACE_ME"
+      post.puts "thumbnail-img: assets/img/thumbnails/Day%20X.png
       post.puts "comments: true"
       post.puts "---"
       post.puts "# 🤨 What went wrong?"

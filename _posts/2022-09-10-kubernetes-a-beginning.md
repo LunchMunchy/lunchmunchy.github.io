@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Kubernetes - A Beginning
-subtitle: Day 2
+subtitle: DAY 2
 tags: [100DaysOfCloud, DevSecOps]
-thumbnail-img: assets/img/jason-kubernetes.png
+thumbnail-img: assets/img/thumbnails/Day%202.png
 comments: true
 ---
 
@@ -52,7 +52,7 @@ Do that 10 times and you'll wish "Gee, I wish there was a way to automate that w
 # 💤 TL;DR
 Kubernetes **orchestrates containerized applications**.
 
-`Lots of pieces of code + Placed across differnt machines + Conductor managing the machines.`
+`Lots of pieces of code + Placed across differnt machines + Conductor managing the machines`
 
 Think literal conductor, like an orchestra.
 
@@ -63,6 +63,6 @@ In the end, Kubernetes helps your scale your product. If you need to add/stop/ch
 ![](../assets/img/conductor.png)
 
 # 📚 Resources
-- [What is Kubernetes | Kubernetes explained in 15 mins ](https://youtu.be/VnvRFRk_51k?t=87) <- I didn't watch the full video. Literally stopped at this one frame.
-- [Moving from Monoliths to Microservices 🎂 → 🍰🍰🍰 ](https://www.youtube.com/watch?v=rckfN7xFig0)
+- [Kubernetes explained in 15 mins](https://youtu.be/VnvRFRk_51k?t=87) <- I didn't watch the full video. Literally stopped at this one frame.
+- [Moving from Monoliths to Microservices 🎂 → 🍰🍰🍰](https://www.youtube.com/watch?v=rckfN7xFig0)
 - [Kubernetes Comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic) <- Read this after I wrote the blog (Proud of myself for getting half right)
