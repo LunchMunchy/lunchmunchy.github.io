@@ -1,6 +1,6 @@
 ---
 layout: post
-title: *Kubernetes:* A Beginning
+title: Kubernetes - A Beginning
 subtitle: Day 2
 tags: [100DaysOfCloud, DevSecOps]
 cover-img: [REPLACE_ME]
