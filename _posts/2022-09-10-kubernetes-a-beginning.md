@@ -7,7 +7,7 @@ thumbnail-img: assets/img/thumbnails/Day%202.png
 comments: true
 ---
 
-# 🤨 Let's define Kubernetes
+# 🤓 Let's define Kubernetes
 
 Kubernetes is an **orchestration** tool that manages **containerized applications**. What does that mean....?
 
