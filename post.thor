@@ -1,3 +1,4 @@
+#thor post:new Why I quit 100DaysOfKubernetes on Day 1 -t 100DaysOfKubernetes, Me rambling
 require "stringex"
 require "thor"
 
@@ -36,7 +37,7 @@ class Post < Thor
       post.puts "subtitle: DAY X"
       post.puts "tags: \[#{tags}\]"
       post.puts "cover-img: REPLACE_ME"
-      post.puts "thumbnail-img: assets/img/thumbnails/Day%20X.png
+      post.puts "thumbnail-img: assets/img/thumbnails/Day%20X.png"
       post.puts "comments: true"
       post.puts "readtime: true"
       post.puts "---"
