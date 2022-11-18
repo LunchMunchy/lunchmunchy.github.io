@@ -1,14 +1,13 @@
 ---
 layout: post
-title: How to Setup Zero2JupyterHub like a Noob z2jh, tutorial
-subtitle: DAY X
-tags: [100DaysOfCloud, ]
-cover-img: REPLACE_ME
-thumbnail-img: assets/img/thumbnails/Day%20X.png
+title: How to Setup Zero2JupyterHub like a Noob
+subtitle: DAY 3
+tags: [100DaysOfCloud, DevSecOps, z2jh]
+thumbnail-img: assets/img/thumbnails/Day%203.png
 comments: true
 readtime: true
 ---
-
+# 1️⃣ Getting Started
 | Articles                                                                                           |
 | -------------------------------------------------------------------------------------------------- |
 | [**Part 1: Intro + Script**](#example)                                                                 |
@@ -27,8 +26,7 @@ readtime: true
 > 
 > This is a multi-blog series. That’s right, I’m milking this sucker for as much content as I can get.
 
-# 📚 Table of Contents (Part 1)
-- [📚 Table of Contents (Part 1)](#-table-of-contents-part-1)
+# 📚 Table of Contents
 - [✌️ Introduction](#️-introduction)
 - [🤓 The Script: z2jh.sh](#-the-script-z2jhsh)
 - [🕺 Breakdown](#-breakdown)
