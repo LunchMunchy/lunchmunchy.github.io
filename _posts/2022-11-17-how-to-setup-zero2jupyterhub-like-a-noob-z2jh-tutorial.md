@@ -59,8 +59,9 @@ The 2nd reason I'm documenting everything is because IMO the **[Z2JH](https://z2
 #!/bin/bash
 
 install_tools() {
-sudo apt install curl unzip
+sudo apt install -y curl unzip
 
+if [ -f "awscliv2.zip" ]; then rm awscliv2.zip fi
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
@@ -73,6 +74,7 @@ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(cur
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 
+if [ -f "gethelm.sh" ]; then rm gethelm.sh fi
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
@@ -181,9 +183,9 @@ kubectl get pod --namespace $NAMESPACE
 kubectl --namespace $NAMESPACE get service proxy-public #--output jsonpath='{.status.loadBalancer.ingress[].ip}'
 }
 
-setup_aws
-install_kops_kubectl
-setup_kops_cluster
+install_tools
+setup_aws_cli
+create_k8s_cluster
 install_jupyterhub
 
 
@@ -197,12 +199,13 @@ You will **need the following creds** ready to copy + paste:
 
 - **Access Key**
 - **Secret Acccess Key**
+- **Default Region** - [Find the closest one to you](https://docs.aws.amazon.com/general/latest/gr/rande.html)
 
-**Step 1** - Run the script
+**Step 1** - Copy and paste the script into `z2jh.sh` or any file name. Run the script
 
 ```
 chmod +x z2jh.sh
-./z2jh.sh
+sudo . ./z2jh.sh
 ```
 
 **Step 2** - Interact with script
@@ -248,8 +251,8 @@ This is what worked for me, you don't have to replicate me exactly. I think as l
 | Thing             | Type                         |
 | ----------------- | ---------------------------- |
 | Date              | 2022-11-17                   |
-| Virtual Machine   | Virt-Manager                 |
-| Linux             | Lubuntu 20.04.1 x86_64       |
+| Virtual Machine   | Virt-Manager 4MB 2CPU 25GB   |
+| Linux             | Xubuntu 20.04.1 x86_64       |
 | Shell             | `bash` 5.1.16                |
 | `aws` Version     | aws-cli/2.8.12 Python/3.9.11 |
 | `kubectl` Version | Bash                         |
