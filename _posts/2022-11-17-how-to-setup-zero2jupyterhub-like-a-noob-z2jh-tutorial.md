@@ -8,6 +8,7 @@ comments: true
 readtime: true
 ---
 # 1️⃣ Getting Started
+
 | Articles                                                                                           |
 | -------------------------------------------------------------------------------------------------- |
 | [**Part 1: Intro + Script**](#example)                                                                 |
@@ -18,13 +19,13 @@ readtime: true
 | [Part 6: What I’m going to do next](https://lunchmunchy.github.io/aboutme/)                        |
    
 ---
-> BLUF:
+> BOTTOM LINE UP FRONT
 > 
 > **If you’re here for the script, [scroll down](#-the-script-z2jhsh).**
 > 
-> If you care about me for the quality content I write, you can read through my experience setting up JupyterHub on K8s. 
+> But maybe **you have a heart(?)** and care about me for the quality content I write. If so, **read through** my experience setting up JupyterHub on K8s. 
 > 
-> This is a multi-blog series. That’s right, I’m milking this sucker for as much content as I can get.
+> This is a **multi-blog** series. I’m **milking this sucker** for as much content as I can get.
 
 # 📚 Table of Contents
 - [✌️ Introduction](#️-introduction)
@@ -37,19 +38,19 @@ readtime: true
 - [🙏 Hope this helped](#-hope-this-helped)
 
 # ✌️ Introduction
->*My name is Paul and I’m a very junior Cloud engineering. I decided to document my learning for fun [and profit](https://lunchmunchy.github.io/aboutme/). My writing style is beginner friendly, I hope. If you’re totally new, then maybe you'll learn from my mistakes.*
+>*My name is **Paul** and I’m a very junior **Cloud Engineer**. I decided to document my learning on a **blog for fun [and profit](https://lunchmunchy.github.io/aboutme/)**. My writing style is **beginner friendly**, I hope. If you’re totally new, then maybe you'll learn from my mistakes.*
 
-It’s been a while since I’ve blogged. I look at my first tweet ever and pat myself on the back. I’m a freaking psychic.
+The last time I was active on Twitter or my blog was September. It's now November. I look at my first tweet ever and pat myself on the back. **Absolute psychic**.
 
-<div class="center">
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">First tweet ever is <a href="https://twitter.com/hashtag/100DaysOfKubernetes?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfKubernetes</a>! 🥳<br><br>One of two things will happen:<br>1. I somehow complete this with relative consistency<br>2. You see my tweets disappear after &lt; 2 weeks<br><br>I&#39;m putting money on #2. Yay...<br><br>I&#39;ll look back on this 10 years later and cringe 🤮<a href="https://twitter.com/hashtag/DevOps?src=hash&amp;ref_src=twsrc%5Etfw">#DevOps</a></p>&mdash; Paul Tan (@LunchMunchy) <a href="https://twitter.com/LunchMunchy/status/1567162164065992704?ref_src=twsrc%5Etfw">September 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">First tweet ever is <a href="https://twitter.com/hashtag/100DaysOfKubernetes?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfKubernetes</a>! 🥳<br><br>One of two things will happen:<br>1. I somehow complete this with relative consistency<br>2. You see my tweets disappear after &lt; 2 weeks<br><br>I&#39;m putting money on #2. Yay...<br><br>I&#39;ll look back on this 10 years later and cringe 🤮<a href="https://twitter.com/hashtag/DevOps?src=hash&amp;ref_src=twsrc%5Etfw">#DevOps</a></p>&mdash; Paul Tan (@LunchMunchy) <a href="https://twitter.com/LunchMunchy/status/1567162164065992704?ref_src=twsrc%5Etfw">September 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 But much to my surprise, I didn’t *actually* quit my cloud learning.
 
-Last week to this day, I took on a DevSecOps project. My goal was simple: Set up JupyterHub on Kubernetes. I took nearly a week to follow the (un)official (Z2JH Guide)[https://z2jh.jupyter.org/en/stable/], and let me tell you: It was a mess. That’s why I’m blogging about everything that went wrong. On the bright side, I learned a whole bunch, and I feel like 1% more like a true cloud engineer now.
+Last week to this day, I took on a **DevSecOps project**. My goal was simple: Set up **JupyterHub on Kubernetes**. I took nearly a week to follow the (un)official [Z2JH Guide](https://z2jh.jupyter.org/en/stable/). And let me tell you: **It was a mess**. That’s why I’m blogging about everything that went wrong. On the bright side, I **learned a whole bunch**, and I feel like 1% more like a true cloud engineer now.
 
-Also, I turned what I learned into a simple bash script that should get you a very basic working JupyterHub. In my opinion, the (Z2JH Guide)[https://z2jh.jupyter.org/en/stable/] really wasn’t that intuitive or great, especially for beginners. That’s why I hope folks will get a lot of use from (Part 3)[] and (Part 4)[] of my writeup.
+Also, I include **my bash script** to automate setting up very simple, working JupyterHub. I hope folks will find my script **is helpful**. But from my experience, bash scripts on random blogs are just piles of errors when run.
+
+The 2nd reason I'm documenting everything is because IMO the **[Z2JH](https://z2jh.jupyter.org/en/stable/) Guide isn't intuitive** or great, especially for beginners. If you're brand new, hopefully **my [blog](#-hope-this-helped) will help**.
 
 
 # 🤓 The Script: z2jh.sh
@@ -191,30 +192,29 @@ echo "All Done!"
 
 # 🕺 Breakdown
 ## How to use the script
-**Step 0.** 
+**Step 0** - I'll assume your account on Amazon **AWS is set up**. If not, read [Part 2](#example2) of my blog
+You will **need the following creds** ready to copy + paste:
 
-I'll assumes you have your Amazon AWS account all set up. If not, read [Part 2](#example2) of my blog
-You will need the following creds ready to copy + paste:
+- **Access Key**
+- **Secret Acccess Key**
 
-- Access Key
-- Secret Acccess Key
+**Step 1** - Run the script
 
-**Step 1.**
 ```
 chmod +x z2jh.sh
 ./z2jh.sh
 ```
 
-**Step 2.**
+**Step 2** - Interact with script
+
 - Type in your root password when prompted
 - Hit enter multiple times to create your ssh-key
 - Type in your bucketname, clustername, releasename, and namespace when prompted (Explained in [Part 4](https://lunchmunchy.github.io/aboutme/) and [Part 5](https://lunchmunchy.github.io/aboutme/))
 
-**Step 3.**
+**Step 3** - Copy the proxy-public IP address from the final output, and navigate to the website on your browser.
 
-Copy the proxy-public IP address from the final output, and navigate to the website on your browser.
+**Step 4** -
 
-**Step 4.**
 ``` python
 if error:
   troubleshoot()
@@ -263,7 +263,7 @@ Or keep reading the next pages of my blog to troubleshoot.
 | Articles                                                                                           |
 | -------------------------------------------------------------------------------------------------- |
 | [Part 1: Intro + Script](#example)                                                                 |
-| [Part 2: Setting up Amazon AWS is not Intuitive](#example2)                                        |
+| [**Part 2: Setting up Amazon AWS is not Intuitive**](#example2)                                        |
 | [Part 3: Kubenetes Terminology and Architecture is not intuitive](#third-example)                  |
 | [Part 4: How to Automate your K8s Cluster Setup with Kops](#fourth-examplehttpwwwfourthexamplecom) |
 | [Part 5: KubeCTL and Helm](https://lunchmunchy.github.io/aboutme/)                                 |
