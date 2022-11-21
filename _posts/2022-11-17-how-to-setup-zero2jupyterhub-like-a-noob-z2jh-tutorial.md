@@ -61,7 +61,7 @@ The 2nd reason I'm documenting everything is because IMO the **[Z2JH](https://z2
 install_tools() {
 sudo apt install -y curl unzip
 
-if [ -f "awscliv2.zip" ]; then rm awscliv2.zip fi
+if [ -f "awscliv2.zip" ]; then rm -rf awscliv2.zip aws fi
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
@@ -114,7 +114,7 @@ export NAME="$clustername".k8s.local
 
 export KOPS_STATE_STORE=s3://"$bucketname"
 
-export REGION=`curl -s http://169.254.169.254/latest/dynamic/instance-identity/document|grep region|awk -F\" '{print $4}'`
+REGION=`sed -n 'x;$p' ~/.aws/config | cut -d" " -f3`
 
 export ZONES=$(aws ec2 describe-availability-zones --region $REGION | grep ZoneName | awk '{print $2}' | head -n1 | tr -d '"' | sed 's/.$//')
 
@@ -151,7 +151,7 @@ cat <<EOF >config.yaml
 # sure to refer to the Helm chart version of interest to you!
 #
 # Introduction to YAML:     https://www.youtube.com/watch?v=cdLNKUoMc6c
-e Chart config reference:   https://zero-to-jupyterhub.readthedocs.io/en/stable/resources/reference.html
+# Chart config reference:   https://zero-to-jupyterhub.readthedocs.io/en/stable/resources/reference.html
 # Chart default values:     https://github.com/jupyterhub/zero-to-jupyterhub-k8s/blob/HEAD/jupyterhub/values.yaml
 # Available chart versions: https://jupyterhub.github.io/helm-chart/
 #
@@ -178,7 +178,8 @@ helm upgrade --cleanup-on-fail \
   --version=2.0.0 \
   --values config.yaml
 
-sleep 30
+echo "Awaiting External-IP...Takes 2-5 minutes"
+time until kubectl --namespace $NAMESPACE get service proxy-public --output json | jq .spec.ports[0].nodePort sleep 45
 kubectl get pod --namespace $NAMESPACE
 kubectl --namespace $NAMESPACE get service proxy-public #--output jsonpath='{.status.loadBalancer.ingress[].ip}'
 }
