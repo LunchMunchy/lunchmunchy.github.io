@@ -61,7 +61,7 @@ The 2nd reason I'm documenting everything is because IMO the **[Z2JH](https://z2
 install_tools() {
 sudo apt install -y curl unzip
 
-if [ -f "awscliv2.zip" ]; then rm -rf awscliv2.zip aws fi
+if [ -f "awscliv2.zip" ]; then rm -rf awscliv2.zip aws; fi
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
@@ -74,7 +74,7 @@ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(cur
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 
-if [ -f "gethelm.sh" ]; then rm gethelm.sh fi
+if [ -f "gethelm.sh" ]; then rm gethelm.sh; fi
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
@@ -98,21 +98,21 @@ setup_aws_cli() {
   complete -C '/usr/local/bin/aws_completer' aws
 
   aws configure
-  
-  echo State S3 bucket name:
-  read bucketname
-  aws s3api create-bucket --bucket "$bucketname" --region us-east-1
 }
 
 create_k8s_cluster() {
-ssh-keygen
-kops create secret --name $NAME sshpublickey admin -i ~/.ssh/id_rsa.pub
+echo State S3 bucket name:
+read bucketname
+aws s3api create-bucket --bucket "$bucketname" --region us-east-1
+export KOPS_STATE_STORE=s3://"$bucketname"
 
 echo Assign a cluster name:
 read clustername
 export NAME="$clustername".k8s.local
 
-export KOPS_STATE_STORE=s3://"$bucketname"
+ssh-keygen
+kops create secret sshpublickey admin -i cluster.$NAME --name $NAME --state $KOPS_STATE_STORE
+
 
 REGION=`sed -n 'x;$p' ~/.aws/config | cut -d" " -f3`
 
@@ -164,10 +164,10 @@ helm search repo jupyterhub
 # kubectl get storageclass
 # kubectl patch storageclass gp2 -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
 
-echo State release name:
+echo "State release name:"
 read releasename
 
-echo State namespace:
+echo "State namespace:"
 read namespace
 export NAMESPACE="$namespace"
 
@@ -179,7 +179,7 @@ helm upgrade --cleanup-on-fail \
   --values config.yaml
 
 echo "Awaiting External-IP...Takes 2-5 minutes"
-time until kubectl --namespace $NAMESPACE get service proxy-public --output json | jq .spec.ports[0].nodePort sleep 45
+time until kubectl --namespace $NAMESPACE get service proxy-public --output json | jq .spec.ports[0].nodePort; do sleep 45; done
 kubectl get pod --namespace $NAMESPACE
 kubectl --namespace $NAMESPACE get service proxy-public #--output jsonpath='{.status.loadBalancer.ingress[].ip}'
 }
